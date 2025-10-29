@@ -605,6 +605,7 @@ body {
     
     .hero-container {
         gap: 50px;
+        place-items: center;
     }
     
     .hero-title {
@@ -616,32 +617,36 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .nav-toggle {
+/* 968px and below: mirror 768px responsive behavior */
+@media (max-width: 968px) {
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: 100vh;
         display: flex;
+        align-items: center;
     }
     
     .hero-container {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+        place-items: center;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
     }
     
     .hero-features {
         grid-template-columns: 1fr;
         gap: 12px;
+        justify-items: center;
     }
     
     .hero-buttons {
@@ -659,17 +664,126 @@ body {
     
     .hero-app-image,
     .app-screenshot {
-        max-width: 250px;
+        max-width: 280px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .feature-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    /* Normal order: text first, then image */
+    .feature-content .feature-text {
+        order: 1;
+    }
+    
+    .feature-content .feature-image {
+        order: 2;
+    }
+    
+    /* Reverse order: image first, then text */
+    .feature-content.reverse .feature-text {
+        order: 2;
+    }
+    
+    .feature-content.reverse .feature-image {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero: full-screen feel with top spacing and perfect centering */
+    .hero {
+        padding-top: 100px; /* headerdən sonra nəfəsliyi artır */
+        padding-bottom: 60px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center; /* şaquli mərkəzlə */
+    }
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        place-items: center; /* center image and content horizontally */
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        justify-items: center; /* center feature rows */
+    }
+
+    /* Center hero content block (title, subtitle, features, buttons) */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .hero-app-image,
+    .app-screenshot {
+        max-width: 280px;
+        width: 100%;
     }
     
     .feature-content {
+        grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
-        justify-content: space-between;
     }
     
-    .feature-content.reverse {
-        direction: ltr;
+    /* Normal order: text first, then image */
+    .feature-content .feature-text {
+        order: 1;
+    }
+    
+    .feature-content .feature-image {
+        order: 2;
+    }
+    
+    /* Reverse order: image first, then text */
+    .feature-content.reverse .feature-text {
+        order: 2;
+    }
+    
+    .feature-content.reverse .feature-image {
+        order: 1;
     }
     
     .feature-benefits {
@@ -699,6 +813,94 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+}
+
+/* 576px and below: also mirror 768px layout with smaller type/spacing */
+@media (max-width: 576px) {
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+        place-items: center;
+    }
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+    }
+    
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.05rem; }
+    .hero-description { font-size: 1rem; }
+    
+    .hero-features { gap: 12px; justify-items: center; }
+    
+    .hero-buttons { gap: 14px; }
+    .btn { max-width: 260px; }
+    
+    .hero-app-image,
+    .app-screenshot {
+        max-width: 240px;
+        width: 100%;
+    }
+}
+
+/* Extra small devices: 420px and below */
+@media (max-width: 420px) {
+    .container { padding: 0 12px; }
+    .nav-container { padding: 0 12px; }
+    
+    .hero { padding-top: 90px; padding-bottom: 50px; }
+    .hero-title { font-size: 1.9rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+    .hero-description { font-size: 0.95rem; }
+    
+    .hero-features { gap: 10px; }
+    .hero-feature { font-size: 13px; }
+    
+    .btn { max-width: 240px; padding: 12px 18px; font-size: 13.5px; }
+    .btn-icon { width: 18px; height: 18px; }
+    
+    .hero-app-image, .app-screenshot { max-width: 220px; }
+    
+    .feature-section { padding: 56px 0; }
+    .download { padding: 56px 0; }
+}
+
+/* Ultra small phones: 360px and below */
+@media (max-width: 360px) {
+    .container { padding: 0 10px; }
+    .nav-container { padding: 0 10px; }
+    
+    .hero { padding-top: 80px; padding-bottom: 44px; }
+    .hero-title { font-size: 1.7rem; }
+    .hero-subtitle { font-size: 0.9rem; }
+    .hero-description { font-size: 0.9rem; }
+    
+    .btn { max-width: 220px; padding: 11px 16px; font-size: 13px; }
+    .hero-app-image, .app-screenshot { max-width: 200px; }
+    
+    .feature-section { padding: 52px 0; }
+    .download { padding: 52px 0; }
+}
+
+/* Very tight screens: 320px and below */
+@media (max-width: 320px) {
+    .hero-title { font-size: 1.55rem; }
+    .btn { max-width: 200px; font-size: 12.5px; padding: 10px 14px; }
+    .hero-app-image, .app-screenshot { max-width: 180px; }
 }
 
 @media (max-width: 480px) {
