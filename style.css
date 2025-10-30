@@ -51,6 +51,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    position: relative; /* anchor for mobile dropdown */
 }
 
 .logo {
@@ -706,11 +707,32 @@ body {
     }
     .nav-links {
         display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(1, 51, 28, 0.08);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px 20px;
+        z-index: 999;
     }
     
     .nav-toggle {
         display: flex;
     }
+
+    /* show mobile menu when toggled */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* animate hamburger to X */
+    .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     
     .hero-container {
         grid-template-columns: 1fr;
@@ -903,80 +925,46 @@ body {
     .hero-app-image, .app-screenshot { max-width: 180px; }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+/* Force 768px-style layout for 540px down to 300px */
+@media (max-width: 540px) and (min-width: 301px) {
+    .container { padding: 0 16px; }
+    .nav-container { padding: 0 16px; }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
     }
-    
-    .nav-container {
-        padding: 0 15px;
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        place-items: center;
     }
-    
-    .hero-title {
-        font-size: 2rem;
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+        padding: 0 4px;
     }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-app-image,
-    .app-screenshot {
-        max-width: 200px;
-    }
-    
-    .btn {
-        padding: 14px 20px;
-        font-size: 14px;
-    }
-    
-    .feature-section {
-        padding: 60px 0;
-    }
-    
-    .download {
-        padding: 60px 0;
-    }
-    
-    .footer {
-        padding: 40px 0 20px;
-    }
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .hero-description { font-size: .8rem; display: flex; flex-wrap: wrap; flex-direction: column; }
+    .hero-features { grid-template-columns: 1fr; gap: 12px; justify-items: center; }
+    .hero-buttons { justify-content: center; flex-direction: column; align-items: center; gap: 16px; }
+    .btn { width: 100%; max-width: 280px; justify-content: center; }
+    .hero-app-image, .app-screenshot { max-width: 280px; width: 100%; }
+    .feature-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .feature-content .feature-text { order: 1; }
+    .feature-content .feature-image { order: 2; }
+    .feature-content.reverse .feature-text { order: 2; }
+    .feature-content.reverse .feature-image { order: 1; }
+    .feature-text { padding: 0 6px; }
+    .section-title, .section-subtitle, .feature-description { word-wrap: break-word; }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-    
-    .header {
-        background: rgba(26, 26, 26, 0.95);
-        border-bottom-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .features {
-        background: #2a2a2a;
-    }
-    
-    .feature-card {
-        background: #333;
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .about {
-        background: #1a1a1a;
-    }
-}
