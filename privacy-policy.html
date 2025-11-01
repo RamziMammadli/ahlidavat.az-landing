@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Məxfilik Siyasəti - Əhli-Dəvət</title>
+    <meta name="description" content="Əhli-Dəvət tətbiqinin məxfilik siyasəti. İstifadəçi məlumatlarının toplanması, istifadəsi və qorunması haqqında məlumat.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Məxfilik Siyasəti - Əhli-Dəvət">
+    <meta property="og:description" content="Əhli-Dəvət tətbiqinin məxfilik siyasəti">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="az_AZ">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#01331C">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+        
+        .privacy-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .privacy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #01331C;
+            margin-bottom: 16px;
+        }
+        
+        .privacy-date {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+        
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #01331C;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        
+        .privacy-section h2:first-child {
+            margin-top: 0;
+        }
+        
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+            margin-top: 28px;
+        }
+        
+        .privacy-section p {
+            color: #555;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        
+        .privacy-section ul, .privacy-section ol {
+            margin: 16px 0;
+            padding-left: 30px;
+            color: #555;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .privacy-section strong {
+            color: #01331C;
+            font-weight: 600;
+        }
+        
+        .privacy-contact {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            border-left: 4px solid #01331C;
+        }
+        
+        .privacy-contact h3 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 100px 16px 60px;
+            }
+            
+            .privacy-title {
+                font-size: 2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .privacy-section h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-text">Əhli-Dəvət</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#home" class="nav-link">Ana Səhifə</a>
+                    <a href="index.html#namaztime" class="nav-link">Namaz Vaxtları</a>
+                    <a href="index.html#qiblah" class="nav-link">Qiblə</a>
+                    <a href="index.html#quran" class="nav-link">Quran</a>
+                    <a href="index.html#download" class="nav-link">Yüklə</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <main class="privacy-content">
+        <div class="privacy-header">
+            <h1 class="privacy-title">Məxfilik Siyasəti</h1>
+            <p class="privacy-date">Son yenilənmə: <span id="last-updated"></span></p>
+        </div>
+
+        <div class="privacy-section">
+            <p>
+                <strong>Əhli-Dəvət</strong> tətbiqini istifadə etdiyinizə görə təşəkkür edirik. Bu Məxfilik Siyasəti, 
+                tətbiqin məxfilik prinsiplərini və istifadəçilərin hüquqlarını izah edir.
+            </p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>1. Offline İşləmə və Məlumat Toplanması</h2>
+            
+            <p>
+                <strong>Əhli-Dəvət</strong> tətbiqi tamamilə <strong>offline</strong> işləyir. Bu o deməkdir ki:
+            </p>
+            
+            <ul>
+                <li><strong>Heç bir məlumat toplanmır:</strong> Tətbiq istifadəçidən heç bir şəxsi məlumat, email, telefon nömrəsi və ya digər identifikasiya məlumatları toplamır.</li>
+                <li><strong>Heç bir məlumat göndərilmir:</strong> Tətbiq heç bir xarici serverə məlumat göndərmir.</li>
+                <li><strong>Heç bir analitika yoxdur:</strong> İstifadə statistikaları, istifadəçi davranışı və ya digər izləmə məlumatları toplanmır.</li>
+                <li><strong>Heç bir tracking yoxdur:</strong> Reklam şirkətləri və ya üçüncü tərəf izləmə xidmətləri istifadə olunmur.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>2. Yer Məlumatları</h2>
+            
+            <p>
+                Namaz vaxtlarının dəqiq hesablanması və qiblə istiqamətinin müəyyən edilməsi üçün tətbiq cihazınızın 
+                GPS və ya şəbəkə məlumatlarından istifadə edir. <strong>Əhəmiyyətli:</strong>
+            </p>
+            
+            <ul>
+                <li>Yer məlumatları yalnız cihazınızda işlənir və namaz vaxtları hesablaması üçün istifadə olunur.</li>
+                <li>Heç bir yer məlumatı heç bir xarici serverə göndərilmir.</li>
+                <li>Yer məlumatları cihazınızda saxlanılmır, yalnız real vaxtda istifadə olunur.</li>
+                <li>İstənilən vaxt cihazınızın parametrlərindən tətbiqin yer məlumatlarına çıxışını dayandıra bilərsiniz.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>3. Yerli Saxlama (Local Storage)</h2>
+            
+            <p>
+                Tətbiq yalnız cihazınızda (local storage) aşağıdakı məlumatları saxlayır:
+            </p>
+            
+            <ul>
+                <li>Seçdiyiniz şəhər və ya yer (namaz vaxtları üçün)</li>
+                <li>Sevimli ayələr (əgər seçmisinizsə)</li>
+                <li>Tətbiq parametrləri və seçimləriniz</li>
+            </ul>
+            
+            <p>
+                Bu məlumatlar <strong>yalnız cihazınızda</strong> saxlanılır və heç bir xarici serverə ötürülmür. 
+                Tətbiqi silməklə bütün bu məlumatlar da silinir.
+            </p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>4. Məlumatların Paylaşılması</h2>
+            
+            <p>
+                Tətbiq tamamilə offline işlədiyi və heç bir məlumat toplamadığı üçün:
+            </p>
+            
+            <ul>
+                <li><strong>Məlumat satışı yoxdur:</strong> İstifadəçilərin məlumatları satılmır və ya üçüncü tərəflərə verilmir.</li>
+                <li><strong>Reklam yoxdur:</strong> Tətbiq tamamilə pulsuz və reklamsız olduğu üçün reklam şirkətləri ilə məlumat paylaşımı yoxdur.</li>
+                <li><strong>Analitika yoxdur:</strong> Üçüncü tərəf analitika xidmətləri istifadə olunmur.</li>
+                <li><strong>Məlumat paylaşımı yoxdur:</strong> Başqa şirkətlər və ya təşkilatlarla məlumat paylaşımı aparılmır.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>5. İstifadəçi Hüquqları</h2>
+            
+            <p>İstifadəçilər olaraq sizə tam nəzarət verilir:</p>
+            
+            <ul>
+                <li><strong>Məlumatlarınıza çıxış:</strong> Cihazınızda saxlanılan bütün məlumatlar tətbiq daxilində görünür.</li>
+                <li><strong>Məlumatları silmə:</strong> Tətbiqi silməklə cihazınızdakı bütün məlumatlar tamamilə silinir.</li>
+                <li><strong>İcazələri idarə etmə:</strong> Cihazınızın parametrlərindən tətbiqin icazələrini (GPS, yer məlumatları və s.) istənilən vaxt idarə edə bilərsiniz.</li>
+                <li><strong>Tətbiqi istifadə etməmək:</strong> İstənilən vaxt tətbiqi silə və ya istifadəni dayandıra bilərsiniz.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>6. Təhlükəsizlik</h2>
+            
+            <p>
+                Tətbiq tamamilə offline işlədiyi üçün:
+            </p>
+            
+            <ul>
+                <li>Məlumatlar yalnız cihazınızda saxlanılır (local storage).</li>
+                <li>Heç bir məlumat internetə göndərilmir, buna görə də məlumatların oğurlanması riski yoxdur.</li>
+                <li>Tətbiq iOS və Android-nin standart təhlükəsizlik mexanizmlərindən istifadə edir.</li>
+                <li>Daimi təhlükəsizlik yeniləmələri App Store və Google Play vasitəsilə təqdim olunur.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>7. Uşaqların Məxfiliyi</h2>
+            
+            <p>
+                Tətbiqimiz bütün yaş qrupları üçün uyğundur və tamamilə təhlükəsizdir. Uşaqların məxfiliyini qorumaq 
+                üçün:
+            </p>
+            
+            <ul>
+                <li>Heç bir məlumat toplanmadığı üçün uşaqlardan məlumat toplama riski yoxdur.</li>
+                <li>Heç bir sosial şəbəkə inteqrasiyası və ya xarici linklər yoxdur.</li>
+                <li>Tətbiq tamamilə offline və təhlükəsizdir.</li>
+                <li>Valideynlər rahatlıqla uşaqlarının bu tətbiqi istifadə etməsinə icazə verə bilərlər.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>8. Çərçivə Xidmətləri</h2>
+            
+            <p>
+                Tətbiq yüklənərkən App Store (iOS) və ya Google Play (Android) xidmətlərindən istifadə olunur. 
+                Bu platformaların öz məxfilik siyasətləri var və biz onların siyasətlərinə nəzarət etmirik. 
+                Tətbiqi yükləyərkən bu platformaların məxfilik siyasətləri tətbiq olunur.
+            </p>
+            
+            <p>
+                <strong>Qeyd:</strong> Tətbiq yüklənəndən sonra bu platformalar ilə heç bir məlumat paylaşımı yoxdur, 
+                çünki tətbiq tamamilə offline işləyir.
+            </p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>9. Siyasətdə Dəyişikliklər</h2>
+            
+            <p>
+                Bu Məxfilik Siyasətində dəyişikliklər edilərsə, yenilənmiş versiya bu səhifədə yerləşdiriləcək. 
+                Əhəmiyyətli dəyişikliklər olduqda, tətbiq daxilində bildiriş göstərilə bilər.
+            </p>
+        </div>
+
+        <div class="privacy-contact">
+            <h3>Əlaqə</h3>
+            <p>
+                Məxfilik Siyasəti ilə bağlı suallarınız varsa və ya məlumatlarınızın idarə edilməsi ilə 
+                bağlı sorğularınız varsa, bizimlə əlaqə saxlayın:
+            </p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:info@vargroup.az" style="color: #01331C;">info@vargroup.az</a><br>
+                <strong>Vebsayt:</strong> <a href="https://vargroup.az" target="_blank" style="color: #01331C;">www.vargroup.az</a>
+            </p>
+        </div>
+
+        <div class="privacy-section">
+            <p style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.9rem;">
+                Bu Məxfilik Siyasəti Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq hazırlanmışdır.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Əhli-Dəvət</span>
+                    </div>
+                    <p class="footer-description">
+                        Küfrün zülmətindən İslamın nuruna. İslami kitablar və məlumatlar.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Tətbiq</h4>
+                        <a href="#home" class="footer-link">Ana Səhifə</a>
+                        <a href="#namaztime" class="footer-link">Namaz Vaxtları</a>
+                        <a href="#qiblah" class="footer-link">Qiblə</a>
+                        <a href="#quran" class="footer-link">Quran</a>
+                        <a href="#download" class="footer-link">Yüklə</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Haqqında</h4>
+                        <a href="privacy-policy.html" class="footer-link">Məxfilik Siyasəti</a>
+                        <a href="mailto:info@vargroup.az" class="footer-link">Əlaqə: info@vargroup.az</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © <span id="current-year"></span> Əhli-Dəvət. VarGroup.az tərəfindən hazırlanıb. Bütün hüquqlar qorunur.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set last updated date
+        document.getElementById('last-updated').textContent = new Date().toLocaleDateString('az-AZ', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
